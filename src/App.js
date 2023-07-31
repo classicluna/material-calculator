@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import MaterialForm from './components/MaterialForm';
+import MaterialResult from './components/MaterialResult';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [materialName, setMaterialName] = useState('');
+  const [materialQuantity, setMaterialQuantity] = useState(null);
+
+  const calculateMaterials = ({
+    length,
+    width,
+    height,
+    quantity,
+    materialName,
+  }) => {
+    const totalVolume = length * width * height;
+    const estimatedQuantity = totalVolume * quantity;
+
+    setMaterialName(materialName); // Replace this with the actual material name
+    setMaterialQuantity(estimatedQuantity);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Material Quantity Calculator</h1>
+      <MaterialForm calculateMaterials={calculateMaterials} />
+      {materialQuantity !== null && (
+        <MaterialResult
+          materialName={materialName}
+          materialQuantity={materialQuantity}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;
