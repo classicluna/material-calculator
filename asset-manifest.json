@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/material-calculator/static/css/main.0e21c9c4.css",
+    "main.js": "/material-calculator/static/js/main.00b8992f.js",
+    "static/js/787.3acc46d9.chunk.js": "/material-calculator/static/js/787.3acc46d9.chunk.js",
+    "index.html": "/material-calculator/index.html",
+    "main.0e21c9c4.css.map": "/material-calculator/static/css/main.0e21c9c4.css.map",
+    "main.00b8992f.js.map": "/material-calculator/static/js/main.00b8992f.js.map",
+    "787.3acc46d9.chunk.js.map": "/material-calculator/static/js/787.3acc46d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e21c9c4.css",
+    "static/js/main.00b8992f.js"
+  ]
+}
